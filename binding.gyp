@@ -32,13 +32,13 @@
 					'-std=c++11',
 					'-fPIC',
 					'-I./src',
-					'<!@(pkg-config --cflags Qt5Core Qt5Quick Qt5Qml Qt5Multimedia)'
+					'<!@(tools/cflags.sh Qt5Core Qt5Quick Qt5Qml Qt5Multimedia Qt5QuickControls2)'
 				],
 				'ldflags': [
-					'<!@(pkg-config --libs-only-L --libs-only-other Qt5Core Qt5Quick Qt5Qml Qt5Multimedia)'
+					'<!@(pkg-config --libs-only-L --libs-only-other Qt5Core Qt5Quick Qt5Qml Qt5Multimedia Qt5QuickControls2)'
 				],
 				'libraries': [
-					'<!@(pkg-config --libs-only-l Qt5Core Qt5Quick Qt5Qml Qt5Multimedia)'
+					'<!@(pkg-config --libs-only-l Qt5Core Qt5Quick Qt5Qml Qt5Multimedia Qt5QuickControls2)'
 				]
 			}],      
 			['OS=="mac"', {
