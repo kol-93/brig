@@ -1,9 +1,9 @@
 {
 	'targets': [
 	{
-		'target_name': '<!(node -e \"require(\'./package.json\').binary.module_name\")',
-		'module_name': '<!(node -e \"require(\'./package.json\').binary.module_name\")',
-		'module_path': '<!(node -e \"require(\'./package.json\').binary.module_path\")',
+		'target_name': '<!(node -p \"require(\'./package.json\').binary.module_name\")',
+		'module_name': '<!(node -p \"require(\'./package.json\').binary.module_name\")',
+		'module_path': '<!(node -p \"require(\'./package.json\').binary.module_path\")',
 		'sources': [
 			'<!@(tools/genmoc.sh)',
 			'src/brig.cpp',
